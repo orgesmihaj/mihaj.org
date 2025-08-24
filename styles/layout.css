@@ -1,0 +1,23 @@
+/**
+ * Layout 🏗️
+ */
+
+@layer layout {
+    :where(:root) {
+        --layout∙background: light-dark(var(--color∙neutral-000), var(--color∙neutral-950));
+        --layout∙block-size: 100dvh;
+    }
+
+    :where(.layout) {
+        background: var(--layout∙background);
+        block-size: var(--layout∙block-size);
+
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        height: 100dvh;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 50rem;
+    }
+}
