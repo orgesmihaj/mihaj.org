@@ -1,0 +1,137 @@
+/**
+ * Color palette 🎨
+ *
+ * 𝘞𝘩𝘺 𝘖𝘒𝘓𝘊𝘏? It provides access to around 50% more colors compared to sRGB.
+ *            Additionally, LCH are perceptually uniform, meaning changes in
+ *            lightness, chroma, or hue correspond more naturally to how we
+ *            perceive color, and lightness truly represents brightness.
+ *
+ * Read about LCH colors 📚:
+ *      ∙ https://lea.verou.me/blog/2020/04/lch-colors-in-css-what-why-and-how
+ *      ∙ https://www.smashingmagazine.com/2023/08/oklch-color-spaces-gamuts-css
+ */
+
+@layer settings {
+    :where(:root) {
+        /**
+         * Neutral shades 🌒
+         */
+        --color∙neutral-000: oklch(100% .00 266);
+        --color∙neutral-050: oklch( 98% .00 266);
+        --color∙neutral-100: oklch( 96% .01 266);
+        --color∙neutral-200: oklch( 91% .01 266);
+        --color∙neutral-300: oklch( 85% .01 266);
+        --color∙neutral-400: oklch( 70% .02 266);
+        --color∙neutral-500: oklch( 56% .02 266);
+        --color∙neutral-600: oklch( 45% .02 266);
+        --color∙neutral-700: oklch( 31% .02 266);
+        --color∙neutral-800: oklch( 26% .02 266);
+        --color∙neutral-900: oklch( 22% .02 266);
+        --color∙neutral-950: oklch( 18% .02 266);
+
+        /**
+         * Blue shades 🐬
+         */
+        --color∙blue-100: oklch(95% .05 267);
+        --color∙blue-200: oklch(90% .10 267);
+        --color∙blue-300: oklch(83% .20 267);
+        --color∙blue-400: oklch(76% .25 267);
+        --color∙blue-500: oklch(69% .31 267);
+        --color∙blue-600: oklch(62% .27 267);
+        --color∙blue-700: oklch(55% .20 267);
+        --color∙blue-800: oklch(48% .20 267);
+        --color∙blue-900: oklch(41% .10 267);
+        --color∙blue-950: oklch(29% .12 267);
+
+        /**
+         * Orange shades 🍊
+         */
+        --color∙orange-100: oklch(97% .05 62);
+        --color∙orange-200: oklch(90% .10 62);
+        --color∙orange-300: oklch(83% .20 62);
+        --color∙orange-400: oklch(76% .25 62);
+        --color∙orange-500: oklch(69% .31 62);
+        --color∙orange-600: oklch(62% .27 62);
+        --color∙orange-700: oklch(55% .20 62);
+        --color∙orange-800: oklch(48% .20 62);
+        --color∙orange-900: oklch(41% .10 62);
+
+        /**
+         * Yellow shades ☀️
+         */
+        --color∙yellow-100: oklch(97% .05 101);
+        --color∙yellow-200: oklch(90% .10 101);
+        --color∙yellow-300: oklch(83% .20 101);
+        --color∙yellow-400: oklch(76% .25 101);
+        --color∙yellow-500: oklch(69% .31 101);
+        --color∙yellow-600: oklch(62% .27 101);
+        --color∙yellow-700: oklch(55% .20 101);
+        --color∙yellow-800: oklch(48% .20 101);
+        --color∙yellow-900: oklch(41% .10 101);
+
+        /**
+         * Red shades 💋
+         */
+        --color∙red-100: oklch(97% .05 25);
+        --color∙red-200: oklch(90% .10 25);
+        --color∙red-300: oklch(83% .20 25);
+        --color∙red-400: oklch(76% .25 25);
+        --color∙red-500: oklch(69% .31 25);
+        --color∙red-600: oklch(62% .27 25);
+        --color∙red-700: oklch(55% .20 25);
+        --color∙red-800: oklch(48% .20 25);
+        --color∙red-900: oklch(41% .10 25);
+
+        /**
+         * Green shades 🌲
+         */
+        --color∙green-100: oklch(97% .05 145);
+        --color∙green-200: oklch(90% .10 145);
+        --color∙green-300: oklch(83% .20 145);
+        --color∙green-400: oklch(76% .25 145);
+        --color∙green-500: oklch(69% .31 145);
+        --color∙green-600: oklch(62% .27 145);
+        --color∙green-700: oklch(55% .20 145);
+        --color∙green-800: oklch(48% .20 145);
+        --color∙green-900: oklch(41% .10 145);
+
+        /**
+         * Purple shades 🦄
+         */
+        --color∙purple-100: oklch(97% .05 295);
+        --color∙purple-200: oklch(90% .10 295);
+        --color∙purple-300: oklch(83% .20 295);
+        --color∙purple-400: oklch(76% .25 295);
+        --color∙purple-500: oklch(69% .31 295);
+        --color∙purple-600: oklch(62% .27 295);
+        --color∙purple-700: oklch(55% .20 295);
+        --color∙purple-800: oklch(48% .20 295);
+        --color∙purple-900: oklch(41% .10 295);
+
+        /**
+         * Pink shades 🌸
+         */
+        --color∙pink-100: oklch(97% .05 346);
+        --color∙pink-200: oklch(90% .10 346);
+        --color∙pink-300: oklch(83% .20 346);
+        --color∙pink-400: oklch(76% .25 346);
+        --color∙pink-500: oklch(69% .31 346);
+        --color∙pink-600: oklch(62% .27 346);
+        --color∙pink-700: oklch(55% .20 346);
+        --color∙pink-800: oklch(48% .20 346);
+        --color∙pink-900: oklch(41% .10 346);
+
+        /**
+         * Teal shades 🍀
+         */
+        --color∙teal-100: oklch(97% .05 190);
+        --color∙teal-200: oklch(90% .10 190);
+        --color∙teal-300: oklch(83% .20 190);
+        --color∙teal-400: oklch(76% .25 190);
+        --color∙teal-500: oklch(69% .31 190);
+        --color∙teal-600: oklch(62% .27 190);
+        --color∙teal-700: oklch(55% .20 190);
+        --color∙teal-800: oklch(48% .20 190);
+        --color∙teal-900: oklch(41% .10 190);
+    }
+}

@@ -1,0 +1,12 @@
+/**
+ * Accessibility ♿
+ */
+
+@layer settings {
+    :where(:root) {
+        --focus-ring∙box-shadow: 0 0 0 .25rem var(--focus-ring∙color);
+        --focus-ring∙color: light-dark(var(--color∙blue-700), var(--color∙blue-900));
+        --focus-ring∙offset: .25rem;
+        --focus-ring∙width: .125rem;
+    }
+}

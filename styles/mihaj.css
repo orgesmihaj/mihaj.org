@@ -1,0 +1,18 @@
+@layer
+    document,
+    settings,
+    elements,
+    components,
+    layout;
+
+/**
+ * Document
+ */
+@import './document.css';
+
+/**
+ * Settings
+ */
+@import './settings/palette.css';
+@import './settings/typescale.css';
+@import './settings/accessibility.css';

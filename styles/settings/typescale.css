@@ -1,0 +1,25 @@
+/**
+ * Typescale 📏
+ *
+ * Read about typographic scales 📚:
+ *      ∙ https://spencermortensen.com/articles/typographic-scale
+ */
+
+@layer settings {
+    :where(:root) {
+        --ratio∙enharmonic: 1.000;
+        --ratio∙schisma: 1.001;
+        --ratio∙minor-diesis: 1.008;
+        --ratio∙diesis: 1.014;
+        --ratio∙minor-second: 1.067;
+        --ratio∙major-second: 1.125;
+        --ratio∙minor-third: 1.200;
+        --ratio∙major-third: 1.250;
+        --ratio∙perfect-fourth: 1.333;
+        --ratio∙augmented-fourth: 1.414;
+        --ratio∙perfect-fifth: 1.500;
+        --ratio∙golden: 1.500;
+
+        --ratio∙typescale: var(--ratio∙perfect-fourth);
+    }
+}
