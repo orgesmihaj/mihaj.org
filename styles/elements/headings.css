@@ -1,0 +1,52 @@
+/**
+ * Headings 📝
+ */
+
+@layer elements {
+    :where(:root) {
+        --heading·color: light-dark(var(--color∙neutral-950), var(--color∙neutral-100));
+    }
+
+    :where(h1, h2, h3, h4, h5, h6) {
+        --font-size: 1rem;
+        --font-weight: 400;
+        --line-height: 1.3;
+
+        color: var(--heading·color);
+
+        font-size: var(--font-size);
+        font-weight: var(--font-weight);
+        line-height: var(--line-height);
+
+        /**
+         * 𝘕𝘰𝘵𝘦: Uses a slower algorithm 🚶‍♂️to prioritize typography,
+         *      reduce orphans, and improve layout quality.
+         *      May impact rendering on extensive text content. ️
+         *
+         * Read more about `text-wrap: pretty` 📚:
+         *      ∙ https://www.w3.org/TR/css-text-4/#valdef-text-wrap-style-pretty
+         *      ∙ https://fonts.google.com/knowledge/glossary/widows_orphans
+         */
+        text-wrap: pretty;
+    }
+
+    :where(h1) {
+        --font-size: calc(1rem * pow(var(--ratio∙typescale), 5));
+    }
+
+    :where(h2) {
+        --font-size: calc(1rem * pow(var(--ratio∙typescale), 4));
+    }
+
+    :where(h3) {
+        --font-size: calc(1rem * pow(var(--ratio∙typescale), 3));
+    }
+
+    :where(h4) {
+        --font-size: calc(1rem * pow(var(--ratio∙typescale), 2));
+    }
+
+    :where(h5) {
+        --font-size: calc(1rem * var(--ratio∙typescale));
+    }
+}

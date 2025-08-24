@@ -1,0 +1,28 @@
+/**
+ * Paragraphs 📝
+ */
+
+@layer elements {
+    :where(p) {
+        --font-size: 1rem;
+        --font-weight: 400;
+        --line-height: 1.5;
+
+        color: light-dark(var(--color∙neutral-900), var(--color∙neutral-200));
+
+        font-size: var(--font-size);
+        font-weight: var(--font-weight);
+        line-height: var(--line-height);
+
+        /**
+         * 𝘕𝘰𝘵𝘦: Uses a slower algorithm 🚶‍♂️to prioritize typography,
+         *      reduce orphans, and improve layout quality.
+         *      May impact rendering on extensive text content. ️
+         *
+         * Read more about `text-wrap: pretty` 📚:
+         *      ∙ https://www.w3.org/TR/css-text-4/#valdef-text-wrap-style-pretty
+         *      ∙ https://fonts.google.com/knowledge/glossary/widows_orphans
+         */
+        text-wrap: pretty;
+    }
+}

@@ -16,3 +16,10 @@
 @import './settings/palette.css';
 @import './settings/typescale.css';
 @import './settings/accessibility.css';
+
+
+/**
+ * Elements
+ */
+@import './elements/headings.css';
+@import './elements/paragraphs.css';
