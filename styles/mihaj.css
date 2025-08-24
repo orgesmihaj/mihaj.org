@@ -22,8 +22,8 @@
  * Elements
  */
 @import './elements/headings.css';
+@import './elements/links.css';
 @import './elements/paragraphs.css';
-
 
 /**
  * Layout

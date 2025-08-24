@@ -1,0 +1,17 @@
+/**
+ * Links 🔗
+ */
+
+@layer elements {
+    :where(:root) {
+        --link∙color: light-dark(var(--color∙neutral-900), var(--color∙neutral-200));
+    }
+
+    :where(a) {
+        color: var(--link∙color);
+        font-size: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+        text-decoration: underline;
+    }
+}
