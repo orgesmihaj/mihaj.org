@@ -6,6 +6,8 @@
     :where(:root) {
         --layout∙background: light-dark(var(--color∙neutral-000), var(--color∙neutral-950));
         --layout∙block-size: 100dvh;
+        --layout∙inline-size: 50rem;
+        --layout∙padding-inline: 1rem;
     }
 
     :where(.layout) {
@@ -13,11 +15,12 @@
         block-size: var(--layout∙block-size);
 
         display: flex;
-        flex-direction: column;
-        gap: 4rem;
-        height: 100dvh;
+            flex-direction: column;
+            gap: 4rem;
+        height: var(--layout∙block-size);
         justify-content: center;
         margin: 0 auto;
-        max-width: 50rem;
+        padding-inline: var(--layout∙padding-inline);
+        max-width: var(--layout∙inline-size);
     }
 }
