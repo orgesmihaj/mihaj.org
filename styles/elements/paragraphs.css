@@ -4,9 +4,9 @@
 
 @layer elements {
     :where(p) {
-        --font-size: 1rem;
+        --font-size: 1.25rem;
         --font-weight: 400;
-        --line-height: 1.5;
+        --line-height: 1.75;
 
         color: light-dark(var(--color∙neutral-900), var(--color∙neutral-200));
 
