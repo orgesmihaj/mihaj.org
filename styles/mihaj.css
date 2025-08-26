@@ -26,6 +26,11 @@
 @import './elements/paragraphs.css';
 
 /**
+ * Components
+ */
+@import './components/piano.css';
+
+/**
  * Layout
  */
 @import './layout.css';

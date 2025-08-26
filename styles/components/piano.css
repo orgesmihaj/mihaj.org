@@ -1,0 +1,53 @@
+/**
+ * Piano 🎹
+ */
+
+@layer components {
+    :where(:root) {
+        --key·background: light-dark(var(--color∙neutral-000), var(--color∙neutral-200));
+        --key·block-size: 12.5rem;
+        --key·border: light-dark(var(--color∙neutral-300), var(--color∙neutral-200));
+        --key·color: light-dark(var(--color∙neutral-600), var(--color∙neutral-800));
+        --key·font-size: .875rem;
+        --key·inline-size: 4rem;
+    }
+
+    :where(.piano) {
+        display: flex;
+            gap: 4px;
+        position: relative;
+    }
+
+    :where(.key) {
+        background: var(--key·background);
+        block-size: var(--key·block-size);
+        border-radius: 0 0 .5rem .5rem;
+        border: 1px solid var(--key·border);
+        color: var(--key·color);
+        cursor: pointer;
+        display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        font-size: var(--key·font-size);
+        font-weight: 500;
+        inline-size: var(--key·inline-size);
+        padding-bottom: 1rem;
+        user-select: none;
+    }
+
+    :where(.key).is-black {
+        --key·background: linear-gradient(
+            to bottom, var(--color∙neutral-800) 0%, var(--color∙neutral-950) 100%
+        );
+        --key·block-size: 8.125rem;
+        --key·color: light-dark(var(--color∙neutral-400), var(--color∙neutral-300));
+        --key·font-size: .75rem;
+        --key·inline-size: 2.5rem;
+
+        border: none;
+        margin-inline-start: -1.375rem;
+        margin-inline-end: -1.375rem;
+
+        z-index: 1;
+    }
+}
