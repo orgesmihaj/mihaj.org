@@ -16,6 +16,7 @@
 @import './settings/palette.css';
 @import './settings/typescale.css';
 @import './settings/accessibility.css';
+@import './settings/semantic.css';
 
 
 /**
@@ -28,7 +29,8 @@
 /**
  * Components
  */
-@import './components/piano.css';
+@import './components/uuid.css';
+@import './components/homepage.css';
 
 /**
  * Layout

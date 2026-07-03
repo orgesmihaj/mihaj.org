@@ -30,8 +30,4 @@
         color: light-dark(var(--color∙neutral-950), var(--color∙neutral-100));
         font-style: normal;
     }
-
-    :where(p):has(+ *) {
-        margin-bottom: 2rem;
-    }
 }

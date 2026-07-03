@@ -65,6 +65,11 @@
     }
 
     body {
-        background: var(--document∙background);
+        background: var(--surface∙page);
+        min-height: 100dvh;
+        display: flex;
+            align-items: center;
+            justify-content: center;
+        padding: 4rem 1rem;
     }
 }

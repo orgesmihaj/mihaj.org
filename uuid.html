@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="UUIDv7 generator — time-ordered unique identifiers." />
+
+    <title>UUIDv7 — Orges Mihaj</title>
+
+    <link rel="icon" href="/favicon·light.svg" type="image/svg+xml" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="/favicon·dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+
+    <link rel="preload" href="/assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/styles/mihaj.css" />
+  </head>
+
+  <body>
+    <main class="layout">
+      <section class="uuid">
+        <h1>UUIDv7</h1>
+
+        <div class="uuid-display">
+          <div class="uuid-value" id="uuid" tabindex="0" role="button" aria-label="UUID value, click to copy" title="Click to copy"></div>
+          <div class="uuid-hint" id="hint">Click to copy</div>
+        </div>
+
+        <div class="uuid-actions">
+          <button id="generate">Generate new</button>
+        </div>
+
+        <div class="uuid-breakdown" id="breakdown" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/uuid.ts"></script>
+  </body>
+</html>

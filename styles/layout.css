@@ -4,23 +4,15 @@
 
 @layer layout {
     :where(:root) {
-        --layout∙background: light-dark(var(--color∙neutral-000), var(--color∙neutral-950));
-        --layout∙block-size: 100dvh;
-        --layout∙inline-size: 50rem;
-        --layout∙padding-inline: 1rem;
+        --layout∙inline-size: 36rem;
+        --layout∙gap: 2rem;
     }
 
     :where(.layout) {
-        background: var(--layout∙background);
-        block-size: var(--layout∙block-size);
-
         display: flex;
             flex-direction: column;
-            gap: 4rem;
-        height: var(--layout∙block-size);
-        justify-content: center;
-        margin: 0 auto;
-        padding-inline: var(--layout∙padding-inline);
+            gap: var(--layout∙gap);
         max-width: var(--layout∙inline-size);
+        width: 100%;
     }
 }

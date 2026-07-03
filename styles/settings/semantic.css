@@ -1,0 +1,20 @@
+/**
+ * Semantic tokens 🎨
+ *
+ * Maps raw palette values to role-based names.
+ * All use light-dark() for automatic light/dark mode.
+ */
+
+@layer settings {
+    :where(:root) {
+        /* ── Surfaces ─────────────────────────────────────────── */
+        --surface∙page:   light-dark(var(--color∙neutral-000), var(--color∙neutral-950));
+        --surface∙subtle: light-dark(var(--color∙neutral-050), var(--color∙neutral-900));
+
+        /* ── Text ─────────────────────────────────────────────── */
+        --text∙heading:   light-dark(var(--color∙neutral-950), var(--color∙neutral-100));
+        --text∙body:      light-dark(var(--color∙neutral-700), var(--color∙neutral-200));
+        --text∙muted:     light-dark(var(--color∙neutral-500), var(--color∙neutral-400));
+        --text∙link:      light-dark(var(--color∙neutral-900), var(--color∙neutral-200));
+    }
+}
