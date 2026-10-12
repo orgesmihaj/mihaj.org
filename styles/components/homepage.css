@@ -14,42 +14,56 @@
             gap: .25rem;
     }
 
-    /* Kilim / xhubleta stitch above the name */
+    /* Qeleshe: a rounded felt crown with a subtle lower edge. */
+    :where(.qeleshe-link) {
+        display: block;
+        align-self: flex-start;
+        width: fit-content;
+        margin-block-end: .875rem;
+        text-decoration: none;
+    }
+
+    :where(.qeleshe-link):focus-visible {
+        border-radius: 2px;
+        outline: var(--focus-ring∙width) solid var(--focus-ring∙color);
+        outline-offset: var(--focus-ring∙offset);
+    }
+
     :where(.motif) {
         display: block;
         overflow: visible;
-        fill: var(--ornament∙motif);
-        /* 18px to the name, including the header's .25rem gap */
-        margin-block-end: .875rem;
+        transform-origin: center bottom;
     }
 
-    :where(.motif) .accent { fill: var(--accent); }
+    :where(.qeleshe-crown) {
+        fill: light-dark(#FAFAF9, #E7E5E0);
+        stroke: light-dark(#71717A, #A8A69F);
+        stroke-width: 1.25;
+    }
 
-    :where(.motif) path {
-        transform-box: fill-box;
-        transform-origin: center;
+    :where(.qeleshe-rim) {
+        stroke: light-dark(#D4D4D0, #BBB8B0);
+        stroke-width: 1;
     }
 
     @media (prefers-reduced-motion: no-preference) {
-        :where(.motif) path {
-            animation: diamond-arrive 650ms cubic-bezier(.22, 1, .36, 1) backwards;
-            transition: translate 300ms cubic-bezier(.22, 1, .36, 1);
+        :where(.motif) {
+            animation: qeleshe-arrive 650ms cubic-bezier(.22, 1, .36, 1) backwards;
+            transition: rotate 300ms ease, translate 300ms ease;
         }
 
-        :where(.motif) path:nth-child(2) { animation-delay: 90ms; }
-        :where(.motif) path:nth-child(3) { animation-delay: 180ms; }
-
         @media (hover: hover) and (pointer: fine) {
-            :where(.header:hover) .motif path:first-child { translate: -2px 0; }
-            :where(.header:hover) .motif .accent { translate: 0 -2px; }
-            :where(.header:hover) .motif path:last-child { translate: 2px 0; }
+            :where(.qeleshe-link:hover) .motif {
+                translate: 0 -2px;
+                rotate: -6deg;
+            }
         }
     }
 
-    @keyframes diamond-arrive {
+    @keyframes qeleshe-arrive {
         from {
             opacity: 0;
-            transform: translateY(4px) scale(.75);
+            transform: translateY(4px) scale(.95);
         }
         to {
             opacity: 1;
