@@ -3,18 +3,29 @@
  *
  * Maps raw palette values to role-based names.
  * All use light-dark() for automatic light/dark mode.
+ *
+ * 𝘕𝘰𝘵𝘦: Values are taken verbatim from the Albanian design reference
+ *      (mihaj-albanian-reference.html), so they're hex rather than palette steps.
  */
 
 @layer settings {
     :where(:root) {
-        /* ── Surfaces ─────────────────────────────────────────── */
-        --surface∙page:   light-dark(var(--color∙neutral-000), var(--color∙neutral-950));
-        --surface∙subtle: light-dark(var(--color∙neutral-050), var(--color∙neutral-900));
+        --surface∙page:      light-dark(#FFFFFF, #0C0C0E);
+        --surface∙subtle:    light-dark(var(--color∙neutral-050), var(--color∙neutral-900));
+        --surface∙selection: light-dark(#F5DCDD, #4A1F22);
 
-        /* ── Text ─────────────────────────────────────────────── */
-        --text∙heading:   light-dark(var(--color∙neutral-950), var(--color∙neutral-100));
-        --text∙body:      light-dark(var(--color∙neutral-700), var(--color∙neutral-200));
-        --text∙muted:     light-dark(var(--color∙neutral-500), var(--color∙neutral-400));
-        --text∙link:      light-dark(var(--color∙neutral-900), var(--color∙neutral-200));
+        --text∙heading:   light-dark(#09090B, #FAFAFA);
+        --text∙body:      light-dark(#52525B, #A1A1AA);
+        --text∙muted:     light-dark(#6B6B76, #A1A1AA);
+        --text∙faint:     light-dark(#71717A, #8B8B94);
+        --text∙link:      light-dark(#18181B, #E4E4E7);
+
+        /* Pomegranate red 🍎 */
+        --accent:         light-dark(#A8232B, #E0626A);
+
+        --ornament∙sep:         light-dark(#B4B4BC, #52525B);
+        --ornament∙motif:       light-dark(#D4D4D8, #3F3F46);
+        --ornament∙ridge-back:  light-dark(#EBEBEE, #26262B);
+        --ornament∙ridge-front: light-dark(#F3F3F5, #1E1E22);
     }
 }

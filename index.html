@@ -13,32 +13,45 @@
 
 		<link rel="preload" href="/assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
 		<link rel="stylesheet" href="/styles/mihaj.css" />
+		<link rel="stylesheet" href="/styles/layout/footer.css" />
   </head>
 
   <body>
 		<main class="layout">
+			<header class="header">
+				<svg class="motif" aria-hidden="true" width="34" height="8" viewBox="0 0 34 8">
+					<path d="M4 0 L8 4 L4 8 L0 4 Z"/>
+					<path class="accent" d="M17 0 L21 4 L17 8 L13 4 Z"/>
+					<path d="M30 0 L34 4 L30 8 L26 4 Z"/>
+				</svg>
+				<h1>Orges Mihaj</h1>
+				<p class="role">Software Engineer</p>
+			</header>
 
-			<div class="header">
-				<span class="name">Orges Mihaj</span>
-				<span class="role">Software engineer</span>
-			</div>
-
-			<p class="now">
+			<p class="bio">
 				Working at Certara on life sciences software.
 				Interested in web standards and the craft of well-made things.
 			</p>
 
 			<footer class="footer">
-
-				<p class="links">
-					<a href="https://www.linkedin.com/in/orgesmihaj" target="_blank" rel="noopener">LinkedIn</a>
-					<span class="sep" aria-hidden="true">·</span>
-					<a href="https://bsky.app/profile/mihaj.org" target="_blank" rel="noopener">BlueSky</a>
-					<span class="sep" aria-hidden="true">·</span>
-					<a href="mailto:developer@mihaj.org">developer@mihaj.org</a>
-				</p>
+				<a href="https://x.com/[HANDLE]" target="_blank" rel="noopener">X</a>
+				<svg class="sep" aria-hidden="true" width="5" height="5" viewBox="0 0 6 6"><path d="M3 0 L6 3 L3 6 L0 3 Z"/></svg>
+				<a href="https://www.linkedin.com/in/orgesmihaj" target="_blank" rel="noopener">LinkedIn</a>
+				<svg class="sep" aria-hidden="true" width="5" height="5" viewBox="0 0 6 6"><path d="M3 0 L6 3 L3 6 L0 3 Z"/></svg>
+				<a href="https://bsky.app/profile/mihaj.org" target="_blank" rel="noopener">BlueSky</a>
+				<svg class="sep" aria-hidden="true" width="5" height="5" viewBox="0 0 6 6"><path d="M3 0 L6 3 L3 6 L0 3 Z"/></svg>
+				<a href="mailto:developer@mihaj.org">developer@mihaj.org</a>
 			</footer>
-
 		</main>
+
+		<!-- Albanian Alps ridge: two hairlines, barely visible -->
+		<svg class="ridge" aria-hidden="true" viewBox="0 0 1440 160" preserveAspectRatio="none">
+			<path class="back" d="M0 132 L70 118 L120 126 L190 96 L240 108 L300 74 L350 92 L420 62 L470 84 L520 70 L590 104 L650 88 L720 50 L780 78 L830 66 L900 96 L960 82 L1030 112 L1090 92 L1150 104 L1210 80 L1270 98 L1330 88 L1390 110 L1440 104" fill="none" stroke-width="1" vector-effect="non-scaling-stroke"/>
+			<path class="front" d="M0 148 L90 138 L170 144 L260 126 L340 136 L430 120 L520 134 L610 124 L700 140 L790 128 L880 138 L980 122 L1080 136 L1180 126 L1280 140 L1380 132 L1440 136" fill="none" stroke-width="1" vector-effect="non-scaling-stroke"/>
+		</svg>
+
+		<p class="greeting" lang="sq"><span data-greeting>Tungjatjeta</span><span class="dot" aria-hidden="true"> ·</span></p>
+
+		<script type="module" src="/src/greeting.ts"></script>
   </body>
 </html>

@@ -1,0 +1,12 @@
+/*
+ * Footer styles 🎨
+ */
+
+@layer layout {
+    :where(.footer) {
+        display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: .75rem;
+    }
+}

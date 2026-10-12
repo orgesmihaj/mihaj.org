@@ -4,8 +4,8 @@
 
 @layer layout {
     :where(:root) {
-        --layout∙inline-size: 36rem;
-        --layout∙gap: 2rem;
+        --layout∙inline-size: 40rem;
+        --layout∙gap: 2.5rem;
     }
 
     :where(.layout) {
@@ -14,5 +14,9 @@
             gap: var(--layout∙gap);
         max-width: var(--layout∙inline-size);
         width: 100%;
+
+        /* Keeps content above the decorative ridge */
+        position: relative;
+        z-index: 1;
     }
 }
