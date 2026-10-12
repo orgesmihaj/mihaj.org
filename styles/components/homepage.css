@@ -3,6 +3,11 @@
  */
 
 @layer components {
+    :where(.homepage) {
+        --layout∙gap: 2rem;
+        --focus-ring∙color: var(--accent);
+    }
+
     :where(.header) {
         display: flex;
             flex-direction: column;
@@ -12,12 +17,45 @@
     /* Kilim / xhubleta stitch above the name */
     :where(.motif) {
         display: block;
+        overflow: visible;
         fill: var(--ornament∙motif);
         /* 18px to the name, including the header's .25rem gap */
         margin-block-end: .875rem;
     }
 
     :where(.motif) .accent { fill: var(--accent); }
+
+    :where(.motif) path {
+        transform-box: fill-box;
+        transform-origin: center;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        :where(.motif) path {
+            animation: diamond-arrive 650ms cubic-bezier(.22, 1, .36, 1) backwards;
+            transition: translate 300ms cubic-bezier(.22, 1, .36, 1);
+        }
+
+        :where(.motif) path:nth-child(2) { animation-delay: 90ms; }
+        :where(.motif) path:nth-child(3) { animation-delay: 180ms; }
+
+        @media (hover: hover) and (pointer: fine) {
+            :where(.header:hover) .motif path:first-child { translate: -2px 0; }
+            :where(.header:hover) .motif .accent { translate: 0 -2px; }
+            :where(.header:hover) .motif path:last-child { translate: 2px 0; }
+        }
+    }
+
+    @keyframes diamond-arrive {
+        from {
+            opacity: 0;
+            transform: translateY(4px) scale(.75);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
 
     :where(.header > h1) {
         --font-size: 1.5rem;
@@ -34,10 +72,21 @@
         line-height: 1.5;
     }
 
+    :where(.intro) {
+        color: var(--text∙heading);
+        font-size: clamp(1.375rem, 1.1rem + 1vw, 1.625rem);
+        font-weight: 400;
+        letter-spacing: -.025em;
+        line-height: 1.45;
+        max-width: 35rem;
+        margin-block: .25rem .5rem;
+        text-wrap: pretty;
+    }
+
     :where(.bio) {
         color: var(--text∙body);
-        font-size: 1.0625rem;
-        line-height: 1.7;
+        font-size: 1rem;
+        line-height: 1.65;
         max-width: 35rem;
     }
 
@@ -111,15 +160,8 @@
 
     :where(.footer) a {
         color: var(--text∙link);
-        text-decoration: underline;
-            text-decoration-color: transparent;
-            text-decoration-thickness: 1px;
-        text-underline-offset: 5px;
-        transition: text-decoration-color .25s ease;
+        text-decoration: none;
     }
-
-    :where(.footer) a:hover,
-    :where(.footer) a:focus-visible { text-decoration-color: var(--accent); }
 
     :where(.footer) a:focus-visible {
         border-radius: 2px;
@@ -127,7 +169,18 @@
         outline-offset: var(--focus-ring∙offset);
     }
 
-    :where(.sep) { fill: var(--ornament∙sep); }
+    :where(.sep) {
+        fill: var(--ornament∙sep);
+        transition: fill .25s ease;
+    }
+
+    :where(.footer) a:focus-visible + .sep,
+    :where(.footer) .sep:has(+ a:focus-visible) { fill: var(--accent); }
+
+    @media (hover: hover) and (pointer: fine) {
+        :where(.footer) a:hover + .sep,
+        :where(.footer) .sep:has(+ a:hover) { fill: var(--accent); }
+    }
 
     /* ── Albanian Alps ridge & greeting ───────────────────────── */
     :where(.ridge) {
@@ -156,7 +209,7 @@
     :where(.greeting) .dot { color: var(--accent); }
 
     @media (prefers-reduced-motion: reduce) {
-        :where(.footer) a { transition: none; }
+        :where(.sep) { transition: none; }
         :where(.company-logo) {
             transition: none;
             transform: none;
