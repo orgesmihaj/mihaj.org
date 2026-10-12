@@ -41,6 +41,36 @@
         max-width: 35rem;
     }
 
+    :where(.company) {
+        white-space: nowrap;
+        text-decoration: none;
+    }
+
+    :where(.company):focus-visible {
+        border-radius: 2px;
+        outline: var(--focus-ring∙width) solid var(--focus-ring∙color);
+        outline-offset: var(--focus-ring∙offset);
+    }
+
+    :where(.company-logo) {
+        display: inline-block;
+        width: 0;
+        height: 1.05em;
+        margin-inline-start: 0;
+        vertical-align: -.15em;
+        opacity: 0;
+        transform: translateX(-.4em);
+        transition: width 200ms ease, margin-inline-start 200ms ease,
+            opacity 200ms ease, transform 200ms ease;
+    }
+
+    :where(.company:hover, .company:focus-visible) .company-logo {
+        width: 1.05em;
+        margin-inline-start: .35em;
+        opacity: 1;
+        transform: translateX(0);
+    }
+
     /* ── List ─────────────────────────────────────────────────── */
     :where(.list) {
         border-top: 1px solid light-dark(var(--color∙neutral-200), var(--color∙neutral-800));
@@ -127,5 +157,9 @@
 
     @media (prefers-reduced-motion: reduce) {
         :where(.footer) a { transition: none; }
+        :where(.company-logo) {
+            transition: none;
+            transform: none;
+        }
     }
 }
